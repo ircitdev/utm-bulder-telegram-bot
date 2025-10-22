@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if exist utm_telegram_bot_fixed.py del utm_telegram_bot_fixed.py)",
+      "Bash(cat K:/scripts2/utmgen/utm_telegram_bot_fixed.py)",
+      "Bash(ssh root@83.166.247.130 \"cat > ~/bots/pride/utm-bulder-telegram-bot/utm_telegram_bot.py\")",
+      "Bash(ssh root@83.166.247.130 \"cd ~/bots/pride/utm-bulder-telegram-bot && python3 -m py_compile utm_telegram_bot.py && echo ''✅ Синтаксис правильный!''\")",
+      "Bash(ssh root@83.166.247.130 \"pkill -f utm_telegram_bot.py; sleep 2; cd ~/bots/pride/utm-bulder-telegram-bot && nohup venv/bin/python utm_telegram_bot.py > bot.log 2>&1 & sleep 2 && ps aux | grep utm_telegram_bot | grep -v grep\")",
+      "Bash(ssh root@83.166.247.130 \"ps aux | grep utm_telegram_bot | grep -v grep && echo ''---LOGS---'' && tail -10 ~/bots/pride/utm-bulder-telegram-bot/bot.log\")",
+      "Bash(ssh root@83.166.247.130 \"sed -n ''138,145p'' ~/bots/pride/utm-bulder-telegram-bot/utm_telegram_bot.py\")",
+      "Bash(ssh root@83.166.247.130 \"killall -9 python python3 2>/dev/null; sleep 3; ps aux | grep -E ''(python|utm)'' | grep -v grep\")",
+      "Bash(ssh root@83.166.247.130 \"cd ~/bots/pride/utm-bulder-telegram-bot && nohup venv/bin/python utm_telegram_bot.py > bot.log 2>&1 & sleep 3 && ps aux | grep utm_telegram_bot | grep -v grep\")",
+      "Bash(ssh root@83.166.247.130 \"tail -20 ~/bots/pride/utm-bulder-telegram-bot/bot.log\")",
+      "Bash(ssh root@83.166.247.130 \"pkill -f utm_telegram_bot.py; sleep 2; cd ~/bots/pride/utm-bulder-telegram-bot && nohup venv/bin/python utm_telegram_bot.py > bot.log 2>&1 &\")",
+      "Bash(ssh root@83.166.247.130 \"pkill -f utm_telegram_bot.py && sleep 2 && cd ~/bots/pride/utm-bulder-telegram-bot && nohup venv/bin/python utm_telegram_bot.py > bot.log 2>&1 &\")",
+      "Bash(ssh root@83.166.247.130 \"sleep 3 && ps aux | grep utm_telegram_bot | grep -v grep && echo ''---LOGS---'' && tail -10 ~/bots/pride/utm-bulder-telegram-bot/bot.log\")",
+      "Bash(ssh root@83.166.247.130 \"cat ~/bots/pride/utm-bulder-telegram-bot/bot.log | tail -20\")",
+      "Bash(ssh root@83.166.247.130 \"cd ~/bots/pride/utm-bulder-telegram-bot && venv/bin/python utm_telegram_bot.py > bot.log 2>&1 &\")",
+      "Bash(ssh root@83.166.247.130 \"ps aux | grep ''[u]tm_telegram_bot''\")",
+      "Bash(ssh root@83.166.247.130 \"tail -15 ~/bots/pride/utm-bulder-telegram-bot/bot.log\")",
+      "Bash(ssh root@83.166.247.130 \"pkill -f utm_telegram_bot.py && sleep 2 && ps aux | grep utm_telegram_bot | grep -v grep || echo ''Бот остановлен''\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
